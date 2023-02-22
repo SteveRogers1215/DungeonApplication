@@ -89,5 +89,6 @@
         public  int CalcHitChance() { return HitChance; }
         public  int CalcDamage() { return 0; }
 
+        
     }//end class
 }//end namespace
