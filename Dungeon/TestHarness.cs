@@ -28,7 +28,10 @@ namespace Dungeon
                 $"Life: {c1.Life} of {c1.MaxLife}\n" +
                 $"Hit Chance: {c1.HitChance}%\n" +
                 $"Block: {c1.Block}");
-            
+
+            Console.WriteLine($"{c1.Name} has a block of {c1.CalcBlock}\n");
+            Console.WriteLine($"{c1.Name} has a hit chance of: {c1.CalcHitChance}\n");
+            Console.WriteLine($"{c1.Name} current damage is: {c1.CalcDamage}\n");
 
             #endregion
 
@@ -50,9 +53,7 @@ namespace Dungeon
                    $"Weapon: {w1.IsTwoHanded}\n");
             #endregion
 
-            Console.WriteLine($"{c1.Name} has a block of {c1.CalcBlock}\n");
-            Console.WriteLine($"{c1.Name} has a hit chance: {c1.CalcHitChance}\n");
-            Console.WriteLine($"{c1.Name} current damage: {c1.CalcDamage}\n");
+            
         }
     }
 }
