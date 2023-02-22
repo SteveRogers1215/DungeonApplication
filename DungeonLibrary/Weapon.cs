@@ -70,7 +70,7 @@ namespace DungeonLibrary
         //Nicely formatted ToString() override
         public override string ToString()
         {
-            return $"{MaxDamage}\n" +
+            return $"Max Damage: {MaxDamage}\n" +
                    $"Min Damage: {MinDamage}\n" +
                    $"Name: {Name}\n" +
                    $"Bonus Hit Chance: {BonusHitChance}\n" +
