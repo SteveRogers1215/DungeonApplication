@@ -12,21 +12,33 @@
          * int block
          */
         private int _life;
-        private int _maxlife;
+        private int _maxLife;
         private string _name;
         private int _strikeChance;
         private int _block;
 
         //Properties - 1 for each field
+        
+        public int MaxLife
+        {
+            get { return _maxLife; }
+            set { _maxLife = value; }
+        }//end int
         public int Life
         {
             get { return _life; }
-            set { _life = value; }
-        }//end int
-        public int MaxLife
-        {
-            get { return _maxlife; }
-            set { _maxlife = value; }
+            set
+            {
+                if (value <= _maxLife)
+                {
+                    _life = value;
+                }//end if
+                else
+                {
+                    _life = MaxLife;
+                }//end else
+
+            }
         }//end int
         public string Name
         {
@@ -63,23 +75,12 @@
         //ToString() override
         public override string ToString()
         {
-            return $"{Life}\n" +
-                   $"Max Life: {MaxLife}\n" +
-                   $"Strike Chance: {StrikeChance}\n" +
-                   $"Block: {Block}\n";
+            return $"--------- {Name} ---------\n" +
+                $"Life: {Life} of {MaxLife}\n" +
+                $"Hit Chance: {StrikeChance}%\n" +
+                $"Block: {Block}";
         }
-        public int CalcBlock()
-        {
-            return Block;
-        }
-        public int CalcHitChance()
-        {
-            return StrikeChance;
-        }
-        public int CalcDamage()
-        {
-            return 0;
-        }
+       
 
         //CalcBlock() returns an int -> return Block;
         //CalcHitChance() returns an int -> return HitChance;(StrikeChance)

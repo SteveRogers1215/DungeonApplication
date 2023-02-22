@@ -32,7 +32,7 @@ namespace DungeonLibrary
         public int MinDamage
         {
             get { return _minDamage; }
-            set { _minDamage = value; }
+            set { _minDamage = value > 0 && value <= MaxDamage ? value : 1; }
         }
         
         public string Name
@@ -77,5 +77,10 @@ namespace DungeonLibrary
                    $"Weapon: {IsTwoHanded}\n";
         }
         
+        public int CalcDamage()
+        {
+            return new Random().Next(MinDamage, MaxDamage + 1);
+
+        }
     }
 }
