@@ -15,14 +15,14 @@ namespace Dungeon
             //build and test a weapon
             //build and test a character - include CalcBlock(), CalchitChance(), CalcDamage()
             #region Character Stuff
-            Console.WriteLine("****Character STUFF ****\n\n");
+            Console.WriteLine("Characters\n\n");
             Character c1 = new Character()
             {
-                MaxLife = 150,
-                Life = 100,
+                MaxLife = 35,
+                Life = 35,
                 Name = "Knight",
-                HitChance = 85,
-                Block = 75,
+                HitChance = 5,
+                Block = 5,
             };
             Console.WriteLine($"Name: {c1.Name}\n" +
                 $"Life: {c1.Life} of {c1.MaxLife}\n" +
@@ -33,13 +33,13 @@ namespace Dungeon
             #endregion
 
             #region Weapon Stuff
-            Console.WriteLine("\n\n**** Weapon STUFF ****\n\n");
+            Console.WriteLine("\n\nWeapons\n\n");
             Weapon w1 = new Weapon()
             {
-                MaxDamage = 200,
-                MinDamage = 50,
+                MaxDamage = 10,
+                MinDamage = 5,
                 Name = "Dragonslayer",
-                BonusHitChance = 75,
+                BonusHitChance = 3,
                 IsTwoHanded = true       
 
             };
@@ -49,6 +49,10 @@ namespace Dungeon
                    $"Bonus Hit Chance: {w1.BonusHitChance}\n" +
                    $"Weapon: {w1.IsTwoHanded}\n");
             #endregion
+
+            Console.WriteLine($"{c1.Name} has a block of {c1.CalcBlock}\n");
+            Console.WriteLine($"{c1.Name} has a hit chance: {c1.CalcHitChance}\n");
+            Console.WriteLine($"{c1.Name} current damage: {c1.CalcDamage}\n");
         }
     }
 }
