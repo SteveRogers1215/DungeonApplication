@@ -24,16 +24,17 @@ namespace DungeonLibrary
         private bool _isTwoHanded;
 
         //Props - 1 for each field
-        public int MinDamage
-        {
-            get { return _minDamage; }
-            set { _minDamage = value; }
-        }
         public int MaxDamage
         {
             get { return _maxDamage; }
             set { _minDamage = value; }
         }
+        public int MinDamage
+        {
+            get { return _minDamage; }
+            set { _minDamage = value; }
+        }
+        
         public string Name
         {
             get { return _name; }
@@ -52,21 +53,25 @@ namespace DungeonLibrary
 
         //Constructors(CTORS)
         //1 Fully Qualified CTOR and 1 Unqualified CTOR if you want object initialization syntax
-        public Weapon(int minDamage, int maxDamage, string name, int bonusHitChance, bool isTwoHanded)
+        public Weapon(int maxDamage, int minDamage, string name, int bonusHitChance, bool isTwoHanded)
         {
-            MinDamage = minDamage;
             MaxDamage = maxDamage;
+            MinDamage = minDamage;
             Name = name;
             BonusHitChance = bonusHitChance;
             IsTwoHanded = isTwoHanded;
+        }
+
+        public Weapon()
+        {
         }
 
         //Methods
         //Nicely formatted ToString() override
         public override string ToString()
         {
-            return $"{MinDamage}\n" +
-                   $"Max Damage: {MaxDamage}\n" +
+            return $"{MaxDamage}\n" +
+                   $"Min Damage: {MinDamage}\n" +
                    $"Name: {Name}\n" +
                    $"Bonus Hit Chance: {BonusHitChance}\n" +
                    $"Weapon: {IsTwoHanded}\n";
