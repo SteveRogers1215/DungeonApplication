@@ -24,14 +24,14 @@ namespace Dungeon
                 HitChance = 5,
                 Block = 5,
             };
-            Console.WriteLine($"Name: {c1.Name}\n" +
+            Console.WriteLine($"Name: {c1.Name}\n" +//Could just do CW(c1)
                 $"Life: {c1.Life} of {c1.MaxLife}\n" +
                 $"Hit Chance: {c1.HitChance}%\n" +
                 $"Block: {c1.Block}");
 
-            Console.WriteLine($"{c1.Name} has a block of {c1.CalcBlock}\n");
-            Console.WriteLine($"{c1.Name} has a hit chance of: {c1.CalcHitChance}\n");
-            Console.WriteLine($"{c1.Name} current damage is: {c1.CalcDamage}\n");
+            Console.WriteLine($"{c1.Name} has a block of {c1.CalcBlock()}\n");
+            Console.WriteLine($"{c1.Name} has a hit chance of: {c1.CalcHitChance()}\n");
+            Console.WriteLine($"{c1.Name} current damage is: {c1.CalcDamage()}\n");
 
             #endregion
 
@@ -46,7 +46,7 @@ namespace Dungeon
                 IsTwoHanded = true       
 
             };
-            Console.WriteLine($"Max Damage: {w1.MaxDamage}\n" +
+            Console.WriteLine($"Max Damage: {w1.MaxDamage}\n" +//Same as CW(c1) just w1
                    $"Min Damage: {w1.MinDamage}\n" +
                    $"Name: {w1.Name}\n" +
                    $"Bonus Hit Chance: {w1.BonusHitChance}\n" +

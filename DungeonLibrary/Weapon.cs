@@ -27,7 +27,7 @@ namespace DungeonLibrary
         public int MaxDamage
         {
             get { return _maxDamage; }
-            set { _minDamage = value; }
+            set { _maxDamage = value; }
         }
         public int MinDamage
         {

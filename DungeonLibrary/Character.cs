@@ -58,10 +58,10 @@
 
         //Ctors - 1 fully qualified, 1 default/unqualified
 
-        public Character(int maxLife, int life,  string name, int hitChance, int block)
+        public Character(int maxLife, string name, int hitChance, int block)
         {
             MaxLife = maxLife;
-            Life = maxLife;
+            Life = maxLife;//Leave this for now
             Name = name;
             HitChance = hitChance;
             Block = block;
@@ -85,9 +85,9 @@
         //CalcBlock() returns an int -> return Block;
         //CalcHitChance() returns an int -> return HitChance;(StrikeChance)
         //CalcDamage() returns an int -> return 0;
-        public virtual int CalcBlock() { return Block; }
-        public virtual int CalcHitChance() { return HitChance; }
-        public virtual int CalcDamage() { return 0; }
+        public  int CalcBlock() { return Block; }
+        public  int CalcHitChance() { return HitChance; }
+        public  int CalcDamage() { return 0; }
 
     }//end class
 }//end namespace
