@@ -22,6 +22,7 @@ namespace DungeonLibrary
         private string _name;
         private int _bonusHitChance;
         private bool _isTwoHanded;
+        public WeaponType _type;
 
         //Props - 1 for each field
         public int MaxDamage
@@ -50,16 +51,22 @@ namespace DungeonLibrary
             get { return _isTwoHanded; }
             set { _isTwoHanded = value; }
         }
+        public WeaponType Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
 
         //Constructors(CTORS)
         //1 Fully Qualified CTOR and 1 Unqualified CTOR if you want object initialization syntax
-        public Weapon(int maxDamage, int minDamage, string name, int bonusHitChance, bool isTwoHanded)
+        public Weapon(int maxDamage, int minDamage, string name, int bonusHitChance, bool isTwoHanded, WeaponType type )
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
             Name = name;
             BonusHitChance = bonusHitChance;
             IsTwoHanded = isTwoHanded;
+            Type = type;
         }
 
         public Weapon()
@@ -74,7 +81,13 @@ namespace DungeonLibrary
                    $"Min Damage: {MinDamage}\n" +
                    $"Name: {Name}\n" +
                    $"Bonus Hit Chance: {BonusHitChance}\n" +
-                   $"Weapon: {IsTwoHanded}\n";
+                   $"Weapon: {IsTwoHanded}\n" +
+                   $"Weapon Type: {Type}\n";
+        }
+
+        public enum WeaponType
+        {
+
         }
         
         //public int CalcDamage()
