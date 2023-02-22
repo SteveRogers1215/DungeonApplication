@@ -50,8 +50,13 @@
         {
             MaxLife = maxLife;
             Life = life;
+            Name = name;
             StrikeChance = strikeChance;
             Block = block;
+        }
+
+        public Character()
+        {
         }
 
         //Methods
