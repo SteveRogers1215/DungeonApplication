@@ -21,9 +21,13 @@ namespace Dungeon
                 MaxLife = 150,
                 Life = 100,
                 Name = "Knight",
-                StrikeChance = 85,
+                HitChance = 85,
                 Block = 75,
             };
+            Console.WriteLine($"--------- {c1.Name} ---------\n" +
+                $"Life: {c1.Life} of {c1.MaxLife}\n" +
+                $"Hit Chance: {c1.HitChance}%\n" +
+                $"Block: {c1.Block}");
             
 
             #endregion
@@ -40,6 +44,11 @@ namespace Dungeon
                 IsTwoHanded = true       
 
             };
+            Console.WriteLine($"{w1.MaxDamage}\n" +
+                   $"Min Damage: {w1.MinDamage}\n" +
+                   $"Name: {w1.Name}\n" +
+                   $"Bonus Hit Chance: {w1.BonusHitChance}\n" +
+                   $"Weapon: {w1.IsTwoHanded}\n");
             #endregion
         }
     }
