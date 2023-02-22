@@ -14,7 +14,7 @@
         private int _life;
         private int _maxLife;
         private string _name;
-        private int _strikeChance;
+        private int _hitChance;
         private int _block;
 
         //Properties - 1 for each field
@@ -45,10 +45,10 @@
             get { return _name; }
             set { _name = value; }
         }//end string
-        public int StrikeChance
+        public int HitChance
         {
-            get { return _strikeChance; }
-            set { _strikeChance = value; }
+            get { return _hitChance; }
+            set { _hitChance = value; }
         }//end int
         public int Block
         {
@@ -58,12 +58,12 @@
 
         //Ctors - 1 fully qualified, 1 default/unqualified
 
-        public Character(int maxLife, int life,  string name, int strikeChance, int block)
+        public Character(int maxLife, int life,  string name, int hitChance, int block)
         {
             MaxLife = maxLife;
-            Life = life;
+            Life = maxLife;
             Name = name;
-            StrikeChance = strikeChance;
+            HitChance = hitChance;
             Block = block;
         }
 
@@ -77,14 +77,17 @@
         {
             return $"--------- {Name} ---------\n" +
                 $"Life: {Life} of {MaxLife}\n" +
-                $"Hit Chance: {StrikeChance}%\n" +
+                $"Hit Chance: {HitChance}%\n" +
                 $"Block: {Block}";
         }
-       
+
 
         //CalcBlock() returns an int -> return Block;
         //CalcHitChance() returns an int -> return HitChance;(StrikeChance)
         //CalcDamage() returns an int -> return 0;
+        public virtual int CalcBlock() { return Block; }
+        public virtual int CalcHitChance() { return HitChance; }
+        public virtual int CalcDamage() { return 0; }
 
     }//end class
 }//end namespace
