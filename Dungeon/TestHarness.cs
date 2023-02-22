@@ -15,7 +15,7 @@ namespace Dungeon
             //build and test a weapon
             //build and test a character - include CalcBlock(), CalchitChance(), CalcDamage()
             #region Character Stuff
-            Console.WriteLine("Characters\n\n");
+            Console.WriteLine("-----Characters-----\n\n");
             Character c1 = new Character()
             {
                 MaxLife = 35,
@@ -24,10 +24,9 @@ namespace Dungeon
                 HitChance = 5,
                 Block = 5,
             };
-            Console.WriteLine($"Name: {c1.Name}\n" +//Could just do CW(c1)
-                $"Life: {c1.Life} of {c1.MaxLife}\n" +
-                $"Hit Chance: {c1.HitChance}%\n" +
-                $"Block: {c1.Block}");
+            Console.WriteLine(c1);
+
+            Console.WriteLine("\n\n");
 
             Console.WriteLine($"{c1.Name} has a block of {c1.CalcBlock()}\n");
             Console.WriteLine($"{c1.Name} has a hit chance of: {c1.CalcHitChance()}\n");
@@ -36,7 +35,7 @@ namespace Dungeon
             #endregion
 
             #region Weapon Stuff
-            Console.WriteLine("\n\nWeapons\n\n");
+            Console.WriteLine("\n\n-----Weapons-----\n\n");
             Weapon w1 = new Weapon()
             {
                 MaxDamage = 10,
@@ -46,11 +45,7 @@ namespace Dungeon
                 IsTwoHanded = true       
 
             };
-            Console.WriteLine($"Max Damage: {w1.MaxDamage}\n" +//Same as CW(c1) just w1
-                   $"Min Damage: {w1.MinDamage}\n" +
-                   $"Name: {w1.Name}\n" +
-                   $"Bonus Hit Chance: {w1.BonusHitChance}\n" +
-                   $"Weapon: {w1.IsTwoHanded}\n");
+            Console.WriteLine(w1);
             #endregion
 
             
