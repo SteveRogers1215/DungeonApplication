@@ -77,10 +77,10 @@ namespace DungeonLibrary
                    $"Weapon: {IsTwoHanded}\n";
         }
         
-        public int CalcDamage()
-        {
-            return new Random().Next(MinDamage, MaxDamage + 1);
+        //public int CalcDamage()
+        //{
+            //return new Random().Next(MinDamage, MaxDamage + 1);
 
-        }
+        //}
     }
 }
