@@ -33,8 +33,7 @@ namespace Dungeon
             #endregion
 
             #region Weapon Stuff
-            Console.WriteLine("\n\n\n******** Weapon STUFF **********");
-            
+            Console.WriteLine("\n\n******** Weapon STUFF **********\n\n");
             Weapon w1 = new Weapon()
             {
                 MaxDamage = 200,

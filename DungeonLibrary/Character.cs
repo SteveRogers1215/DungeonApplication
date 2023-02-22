@@ -88,5 +88,6 @@
         public virtual int CalcBlock() { return Block; }
         public virtual int CalcHitChance() { return HitChance; }
         public virtual int CalcDamage() { return 0; }
+
     }//end class
 }//end namespace
