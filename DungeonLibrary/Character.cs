@@ -1,6 +1,7 @@
 ﻿namespace DungeonLibrary
 {
-    public class Character
+    //abstract denotes an incomplete class or method. This tells the program we wont be making Character objects directly.
+    public abstract class Character
     {
         //Fields
 
@@ -71,6 +72,10 @@
         {
         }
 
+        public Character(int maxLife, string name, int hitChance, int block, int maxDamage, string description) : this(maxLife, name, hitChance, block)
+        {
+        }
+
         //Methods
         //ToString() override
         public override string ToString()
@@ -85,9 +90,9 @@
         //CalcBlock() returns an int -> return Block;
         //CalcHitChance() returns an int -> return HitChance;(StrikeChance)
         //CalcDamage() returns an int -> return 0;
-        public  int CalcBlock() { return Block; }
-        public  int CalcHitChance() { return HitChance; }
-        public  int CalcDamage() { return 0; }
+        public virtual int CalcBlock() { return Block; }
+        public virtual int CalcHitChance() { return HitChance; }
+        public abstract int CalcDamage();//An abstract just says somewhere down the line one of the child classes MUST implement this with some functionality.
 
         
     }//end class
