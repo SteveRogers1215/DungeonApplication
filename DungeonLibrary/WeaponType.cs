@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    internal enum WeaponType
+    public enum WeaponType
     {
         Sword,
         Knife,
