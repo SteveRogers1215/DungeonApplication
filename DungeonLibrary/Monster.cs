@@ -12,8 +12,7 @@ namespace DungeonLibrary
     {
         //Fields
         private int _minDamage;
-        private int _maxDamage;
-        private string _description;
+        
         
         public int MinDamage
         {
@@ -28,9 +27,10 @@ namespace DungeonLibrary
         
 
         //Constructors(CTORS)
-        public Monster(int maxLife, string name, int hitChance, int block, int maxDamage, string description) : base(maxLife, name, hitChance, block, maxDamage, description)
+        public Monster(int maxLife, string name, int hitChance, int block, int maxDamage,int minDamage, string description) : base(maxLife, name, hitChance, block)
         {
             MaxDamage = maxDamage;
+            MinDamage = minDamage;
             Description = description;
 
         }
@@ -39,8 +39,8 @@ namespace DungeonLibrary
         public override string ToString()
         {
             string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n";
-                //+ $"Max Damage: {MaxDamage}";
+            return base.ToString() + $"\nMonster Description: {description}\n"
+                + $"Damage: {MinDamage} to {MaxDamage}";                
         }
         public override int CalcDamage()
         {

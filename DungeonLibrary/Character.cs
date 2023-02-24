@@ -72,9 +72,7 @@
         {
         }
 
-        public Character(int maxLife, string name, int hitChance, int block, int maxDamage, string description) : this(maxLife, name, hitChance, block)
-        {
-        }
+        
 
         //Methods
         //ToString() override
