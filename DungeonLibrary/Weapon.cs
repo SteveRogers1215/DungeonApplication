@@ -85,10 +85,7 @@ namespace DungeonLibrary
                    $"Weapon Type: {Type}\n";
         }
 
-        public enum WeaponType
-        {
-
-        }
+        
         
         //public int CalcDamage()
         //{
