@@ -42,6 +42,7 @@ namespace DungeonLibrary
                 case Race.Angel:
                     break;
                 case Race.Saiyan:
+                    HitChance += 7;
                     break;
                 default:
                     break;
@@ -57,7 +58,7 @@ namespace DungeonLibrary
 
         public override string ToString()
         {
-            //create a string, switch on Player Race and write a desfript about that race.
+            //create a string, switch on Player Race and write a description about that race.
             string description = PlayerRace.ToString();
             return base.ToString() + $"\nWeapon: {EquippedWeapon}\n" +
                 $"Description: {description}";

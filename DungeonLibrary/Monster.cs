@@ -39,8 +39,8 @@ namespace DungeonLibrary
         public override string ToString()
         {
             string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n" +
-                $"Max Damage: {MaxDamage}";
+            return base.ToString() + $"\nMonster Description: {description}\n";
+                //+ $"Max Damage: {MaxDamage}";
         }
         public override int CalcDamage()
         {
