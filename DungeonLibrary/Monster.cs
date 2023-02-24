@@ -34,6 +34,10 @@ namespace DungeonLibrary
             Description = description;
 
         }
+        public Monster()
+        {
+
+        }
 
         //Methods
         public override string ToString()
