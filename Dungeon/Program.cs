@@ -19,12 +19,12 @@ public class Dungeon
         // Variable to keep score
         int score = 0;
         //Possible expanision - a list of premade weapons and allow user to choose(or random)
-        Weapon sword = new Weapon(1, 8, "Dragonslayer", 10, false,  WeaponType.Sword);
+        Weapon sword = new Weapon(1, 8, "Dragonslayer", 10, true,  WeaponType.Sword);
 
 
         //Potential expansion -- let them make their own name
         //Show them possible races and let them pick one.
-        Player player = new(50, "Leroy Jenkins", 50, 40, Race.Saiyan, sword);
+        Player player = new(50, "Sam Squire", 50, 40, Race.Saiyan, sword);
         #endregion
 
 
