@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Xenomorph : Monster
+    public class Saibaman : Monster
     {
-        public Xenomorph(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
+        public Saibaman(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
             base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
             Description = description;
         }
-        public Xenomorph()
+        public Saibaman()
         {
-            Name = "Drooly the Chestburster";
-            MaxLife = 10;
-            HitChance = 6;
-            Block = 6;
-            MaxDamage = 7;
-            MinDamage = 3;
-            Description = "You aren't in space, so we can definetly hear you scream";
-        }//Still need Nicely Formatted ToString
-        //Still need CalcBlock override()
+            Name = "Greeny";
+            MaxLife = 20;
+            HitChance = 8;
+            Block = 10;
+            MaxDamage = 10;
+            MinDamage = 2;
+            Description = "Just add water...";
+        }
         public override string ToString()
         {
             string description = Description.ToString();
@@ -47,15 +46,5 @@ namespace DungeonLibrary
             //Return the damage
             //return grunDamage;
         }
-        //public override int CalcDamage()
-        //{
-        //Create a random object
-        //Random rando = new Random();
-        //Determine damage
-        //int xenoDamage = rando.Next(MinDamage, MaxDamage + 1);
-
-        //Return the damage
-        //return xenoDamage;
-        //}
     }
 }

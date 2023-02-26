@@ -60,17 +60,21 @@ namespace DungeonLibrary
         {
             //Change names and update consturctors after making new monsters this weekend.//NEW CLASSES FOR MONSTERS(HOMEWORK)
             //Create variety of monsters
-            Monster m1 = new(name:"Papa Smurf", maxLife: 50,  hitChance: 30, block: 15, maxDamage: 35, minDamage: 15, description: "He's so...BLUE!");
-            Monster m2 = new(name:"Morgoth", maxLife: 100, hitChance: 47, block: 10, maxDamage: 40, minDamage: 6, description: "The OG Dark Lord");
-            Monster m3 = new(name:"Grunbeld", maxLife: 75, hitChance: 65, block: 45, maxDamage: 77, minDamage: 32, description: "The Flame Dragon Apostle!!");
-            Monster m4 = new(name:"Casper", maxLife: 55, hitChance: 44, block: 33, maxDamage: 39, minDamage: 30, description: "Nothing so see here...just a harmless ghost...");
+            Xenomorph m1 = new(name: "Drooly the Chestburster", maxLife: 10,  hitChance: 6, block: 6, maxDamage: 7, minDamage: 3,
+                description: "You aren't in space, so we can definetly hear you scream");
+            Wyvern m2 = new(name:"Randy", maxLife: 15, hitChance: 8, block: 7, maxDamage: 12, minDamage: 5,
+                description: "Is it a worm...or a dragon?");
+            Saibaman m3 = new(name:"Greeny", maxLife: 20, hitChance: 8, block: 10, maxDamage: 10, minDamage: 2,
+                description: "Just add water...");
+            Grunbeld m4 = new(name:"Grunbeld", maxLife: 50, hitChance: 10, block: 10, maxDamage: 25, minDamage: 5,
+                description: "The Legendary Flame Dragon Knight Apostle!");
             //add monster to a collection
             List<Monster> monsters = new()
             {
-                m1,
-                m2,m2,
+                m1,m1,m1,m1,
+                m2,m2,m2,
                 m3,m3,
-                m4,m4,m4
+                m4,
             };
 
             //pick one at random to place in dungeon room
