@@ -17,8 +17,8 @@ namespace DungeonLibrary
         }
         public Wyvern()
         {
-            Name = "Randy";
-            MaxLife = 15;
+            Name = "Wyvern";
+            MaxLife = 20;
             HitChance = 8;
             Block = 7;
             MaxDamage = 12;

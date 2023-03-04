@@ -43,5 +43,15 @@ namespace DungeonLibrary
                 DoAttack(monster, player);
             }
         }
+
+        public static void DoBattle(Player player, object monster)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void DoBattle(object player, object monster)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Grunbeld : Monster
+    internal class Wyrm : Monster
     {
-        public Grunbeld(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
-            base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
+        public Wyrm(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
             Description = description;
         }
-        public Grunbeld()
+        public Wyrm()
         {
-            Name = "Grunbeld";
-            MaxLife = 55;
-            HitChance = 10;
-            Block = 10;
-            MaxDamage = 25;
-            MinDamage = 7;
-            Description = "The Legendary Flame Dragon Knight Apostle!";
+            Name = "Great Wyrm";
+            MaxLife = 100;
+            HitChance = 30;
+            Block = 20;
+            MaxDamage = 40;
+            MinDamage = 15;
+            Description = "Its hide is impenitrable...it's claws like talons. A MIGHTY FOE.";
         }
         public override string ToString()
         {
@@ -39,12 +38,7 @@ namespace DungeonLibrary
                 calculatedBlock += calculatedBlock / 2;
             }
             return calculatedBlock;
-            //Create a random object
-            //Random rando = new Random();
-            //Determine damage
-            //int grunDamage = rando.Next(MinDamage, MaxDamage + 1);
-            //Return the damage
-            //return grunDamage;
+            
         }
     }
 }

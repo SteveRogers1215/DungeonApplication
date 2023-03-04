@@ -17,15 +17,14 @@ namespace DungeonLibrary
         }
         public Xenomorph()
         {
-            Name = "Drooly the Chestburster";
+            Name = "Chestburster";
             MaxLife = 10;
-            HitChance = 6;
-            Block = 6;
+            HitChance = 10;
+            Block = 5;
             MaxDamage = 7;
             MinDamage = 3;
             Description = "You aren't in space, so we can definetly hear you scream";
-        }//Still need Nicely Formatted ToString
-        //Still need CalcBlock override()
+        }
         public override string ToString()
         {
             string description = Description.ToString();
@@ -40,22 +39,8 @@ namespace DungeonLibrary
                 calculatedBlock += calculatedBlock / 2;
             }
             return calculatedBlock;
-            //Create a random object
-            //Random rando = new Random();
-            //Determine damage
-            //int grunDamage = rando.Next(MinDamage, MaxDamage + 1);
-            //Return the damage
-            //return grunDamage;
+            
         }
-        //public override int CalcDamage()
-        //{
-        //Create a random object
-        //Random rando = new Random();
-        //Determine damage
-        //int xenoDamage = rando.Next(MinDamage, MaxDamage + 1);
-
-        //Return the damage
-        //return xenoDamage;
-        //}
+        
     }
 }

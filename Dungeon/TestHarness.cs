@@ -45,6 +45,7 @@ namespace Dungeon
             Console.WriteLine("\n\n----WEAPON----\n\n");
             Console.WriteLine(w1);//Constructor methods
 
+
             Console.WriteLine("\n\n----PLAYER----\n\n");
             Console.WriteLine(p1);//Constructor methods
             Console.WriteLine($"{p1.Name} has a block of {p1.CalcBlock()}\n");

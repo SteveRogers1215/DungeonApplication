@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace DungeonLibrary
 {
-    public class Grunbeld : Monster
+    internal class Wendigo : Monster
     {
-        public Grunbeld(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
-            base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
+        public Wendigo(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
             MaxDamage = maxDamage;
             MinDamage = minDamage;
             Description = description;
         }
-        public Grunbeld()
+        public Wendigo()
         {
-            Name = "Grunbeld";
-            MaxLife = 55;
-            HitChance = 10;
-            Block = 10;
-            MaxDamage = 25;
-            MinDamage = 7;
-            Description = "The Legendary Flame Dragon Knight Apostle!";
+            Name = "Wendigo";
+            MaxLife = 50;
+            HitChance = 23;
+            Block = 17;
+            MaxDamage = 22;
+            MinDamage = 15;
+            Description = "A consistent devourer of people.";
         }
         public override string ToString()
         {
@@ -39,12 +38,7 @@ namespace DungeonLibrary
                 calculatedBlock += calculatedBlock / 2;
             }
             return calculatedBlock;
-            //Create a random object
-            //Random rando = new Random();
-            //Determine damage
-            //int grunDamage = rando.Next(MinDamage, MaxDamage + 1);
-            //Return the damage
-            //return grunDamage;
+            
         }
     }
 }
