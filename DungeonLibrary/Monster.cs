@@ -59,22 +59,22 @@ namespace DungeonLibrary
 
         {
             //Change names and update consturctors after making new monsters this weekend.//NEW CLASSES FOR MONSTERS(HOMEWORK)
-            //Create variety of monsters
-            Xenomorph m1 = new(name: "Drooly the Chestburster", maxLife: 10,  hitChance: 6, block: 6, maxDamage: 7, minDamage: 3,
-                description: "You aren't in space, so we can definetly hear you scream");
-            Wyvern m2 = new(name:"Randy", maxLife: 15, hitChance: 8, block: 7, maxDamage: 12, minDamage: 5,
-                description: "Is it a worm...or a dragon?");
-            Saibaman m3 = new(name:"Greeny", maxLife: 20, hitChance: 8, block: 10, maxDamage: 10, minDamage: 2,
-                description: "Just add water...");
-            Grunbeld m4 = new(name:"Grunbeld", maxLife: 50, hitChance: 10, block: 10, maxDamage: 25, minDamage: 5,
-                description: "The Legendary Flame Dragon Knight Apostle!");
-            //add monster to a collection
+            //Create variety of monsters//3/2/2023 - MADE THREE NEW MONSTERS WILL ADD THEM SUNDAY MORNING. OUTSIDE OF THAT WILL ATTEMPT SOME LAST MINUTE SYTLING AND LEAVE IT AT THAT 
+            Xenomorph m1 = new("Chestburster", 10,  6, 6,  7,  3, "You aren't in space, so we can definetly hear you scream");
+            Wyvern m2 = new("Wyvern", 15, 8, 7, 12, 5, "Is it a worm...or a dragon?");
+            Saibaman m3 = new("Saibaman",  20,  8,  10,  10,  2,  "Just add water...");
+            Grunbeld m4 = new("Grunbeld",  50,  10,  10,  25,  5,  "The Legendary Flame Dragon Knight Apostle!");
+            Wendigo m5 = new("Wendigo", 50, 23, 17, 22, 15, "A consistent devourer of people.");
+            DemonKing m6 = new("Demon King", 75, 25, 17, 50, 25, "Sometimes its better to just run...");
+            Wyrm m7 = new("Great Wyrm", 100, 30, 20, 40, 15, "Its hide is impenitrable...it's claws like talons. A MIGHTY FOE.");
+            
             List<Monster> monsters = new()
             {
-                m1,m1,m1,m1,
-                m2,m2,m2,
-                m3,m3,
-                m4,
+                m2,m1,
+                m1,m2,m6,m1,
+                m1,m3,m4,m1,m7,
+                m1,m2,m6,m1,
+                m3,m4,
             };
 
             //pick one at random to place in dungeon room

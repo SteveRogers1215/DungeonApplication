@@ -17,11 +17,11 @@ namespace DungeonLibrary
         }
         public Saibaman()
         {
-            Name = "Greeny";
-            MaxLife = 20;
+            Name = "Saibaman";
+            MaxLife = 30;
             HitChance = 8;
             Block = 10;
-            MaxDamage = 10;
+            MaxDamage = 14;
             MinDamage = 2;
             Description = "Just add water...";
         }

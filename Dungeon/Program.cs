@@ -1,5 +1,5 @@
 ﻿using DungeonLibrary;
- namespace Dungeon;
+namespace Dungeon;
 
 public class Dungeon
 
@@ -9,9 +9,12 @@ public class Dungeon
     static void Main(string[] args)
     {
         #region Title/Introduction
-        Console.Title = "DUNGEON OF DOOM";
-        Console.WriteLine("Your journey begins...\n");
-        //Good place for music to start
+        Console.Title = "DIMENSIONS OF DOOM: A text and turn based RPG.";
+        
+
+        Console.WriteLine("       (**)                                         (**)\r\n       IIII                                         IIII\r\n       ####                                         ####\r\n       HHHH     In the middle of the journey of     HHHH\r\n       HHHH    our life I found myself within a     HHHH\r\n       ####   darkwoods where the straight way was  ####\r\n    ___IIII___              LOST...              ___IIII___\r\n .-`_._\"**\"_._`-.                             .-`_._\"**\"_._`-.\r\n|/``  .`\\/`.  ``\\|                           |/``  .`\\/`.  ``\\|\r\n`     }    {     '     -Dante Alighieri      `     }    {     '\r\n      ) () (                                       ) () (\r\n      ( :: )                                       ( :: )\r\n      | :: |                                       | :: |\r\n      | )( |                                       | )( |\r\n      | || |                                       | || |\r\n      | || |                                       | || |\r\n      | || |                                       | || |\r\n      | || |                                       | || |\r\n      | || |                                       | || |\r\n      ( () )                                       ( () )\r\n       \\  /                                         \\  /\r\n        \\/                                           \\/");
+
+        Console.WriteLine("\n\n\n\n\n\n********** Your journey begins in... **********\n\n");
         #endregion
 
 
@@ -19,12 +22,12 @@ public class Dungeon
         // Variable to keep score
         int score = 0;
         //Possible expanision - a list of premade weapons and allow user to choose(or random)
-        Weapon sword = new Weapon(1, 8, "Dragonslayer", 10, true,  WeaponType.Sword);
+        Weapon sword = new Weapon(15, 8, "Dragonslayer", 10, true,  WeaponType.Sword);
 
 
         //Potential expansion -- let them make their own name
         //Show them possible races and let them pick one.
-        Player player = new(50, "Sam Squire", 50, 40, Race.Saiyan, sword);
+        Player player = new( "Hrothgar", 55, 50, 40, Race.Saiyan, sword);
         #endregion
 
 
@@ -34,11 +37,14 @@ public class Dungeon
         //int outerCount = 0;
         do
         {
+
             // Generate random room
             Console.WriteLine(GetRoom());
+            Console.WriteLine();
             // Select a random monster to inhabit room
             Monster monster = Monster.GetMonster();
-            Console.WriteLine($"In this room {monster.Name}!");
+            Console.WriteLine();
+            Console.WriteLine($"In this room you find...{monster.Name}!");
             #region Gameplay Menu Loop
             bool reload = false;
             
@@ -69,6 +75,12 @@ public class Dungeon
                             //Combat rewards -> money, health, etc
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine($"\nYou killed {monster.Name}!");
+                            if (player.Life < 27.5)
+                            {
+                                Console.WriteLine("A second wind!");
+                                player.Life += 7;
+
+                            }
                             Console.ResetColor();
                             //flip the inner loop bool to true
                             reload = true;
@@ -101,7 +113,7 @@ public class Dungeon
                     case ConsoleKey.X:
                     case ConsoleKey.E:
                     case ConsoleKey.Escape:
-                        Console.WriteLine("No one likes a quitter...");
+                        Console.WriteLine("No one likes a quitter...don't let the door hit you on the way out.");
                         exit = true;
                         reload = true;
                         break;
@@ -123,7 +135,7 @@ public class Dungeon
         } while (!exit);//If exit is true the outer will exit as well.
 
         //Show the score
-        Console.WriteLine("You defeated " + score + " monster " + (score == 1 ? "." : "s."));
+        Console.WriteLine("You defeated " + score + " monster " + (score == 1 ? "." :"s."));
         
         #endregion
 
@@ -133,11 +145,11 @@ public class Dungeon
     {
         string[] rooms =
         {
-            "Mount Doom",
-            "Valinor",
-            "Dark Hallway",
-            "Coffee Shop",
-            "The Interstice",
+            "The Slime Pits",
+            "The Misty Cave",
+            "The Dark Forest",
+            "Festering Swamp",
+            "Desolate Byway",
         };
 
         Random rand = new Random();
@@ -147,7 +159,7 @@ public class Dungeon
         string room = rooms[index];
 
         return room;
-        //Possible refactor
+        
         return rooms[new Random().Next(rooms.Length)];
     }//Get Room()
 
