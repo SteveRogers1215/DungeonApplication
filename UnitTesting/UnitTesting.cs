@@ -34,37 +34,37 @@ namespace UnitTesting
 
         }
         [Fact]
-        public void DungeonTestingMinDamageTests3()
+        public void DungeonTestingMaxDamageTests1()
         {
             Saibaman m3 = new(name: "Greeny", maxLife: 20, hitChance: 8, block: 10, maxDamage: 10, minDamage: 2,
                 description: "Just add water...");
-            int expectedMinDamage = 0;
-            int actualMinDamage = 0;
-            expectedMinDamage = 2;
-            actualMinDamage = m3.MinDamage;
-            Assert.Equal(expectedMinDamage, actualMinDamage)
+            int expectedMaxDamage = 0;
+            int actualMaxDamage = 0;
+            expectedMaxDamage = 10;
+            actualMaxDamage = m3.MaxDamage;
+            Assert.Equal(expectedMaxDamage, actualMaxDamage)
 
         }
         [Fact]
-        public void DungeonTestingMinDamageTests4()
+        public void DungeonTestingMaxDamageTests2()
         {
             Grunbeld m4 = new(name: "Grunbeld", maxLife: 50, hitChance: 10, block: 10, maxDamage: 25, minDamage: 5,
                 description: "The Legendary Flame Dragon Knight Apostle!");
-            int expectedMinDamage = 0;
-            int actualMinDamage = 0;
-            expectedMinDamage = 5;
-            actualMinDamage = m4.MinDamage;
-            Assert.Equal(expectedMinDamage, actualMinDamage)
+            int expectedMaxDamage = 0;
+            int actualMaxDamage = 0;
+            expectedMaxDamage = 25;
+            actualMaxDamage = m4.MaxDamage;
+            Assert.Equal(expectedMaxDamage, actualMaxDamage)
         }
         [Fact]
-        public void DungeonTestingMinDamageTests5()
+        public void DungeonTestingMaxDamageTests3()
         {
             DemonKing m6 = new("Demon King", 75, 25, 17, 50, 25, "Sometimes its better to just run...");
-            int expectedMinDamage = 0;
-            int actualMinDamage = 0;
-            expectedMinDamage = 25;
-            actualMinDamage = m6.MinDamage;
-            Assert.Equal(expectedMinDamage, actualMinDamage)
+            int expectedMaxDamage = 0;
+            int actualMaxDamage = 0;
+            expectedMaxDamage = 25;
+            actualMaxDamage = m6.MaxDamage;
+            Assert.Equal(expectedMaxDamage, actualMaxDamage)
 
         }
 
