@@ -8,12 +8,13 @@ namespace DungeonLibrary
 {
     public class Xenomorph : Monster
     {
-        public Xenomorph(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
+        public bool acidSpit { get; set; }
+        public Xenomorph(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description, bool acidSpit) :
             base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            MaxDamage = maxDamage;
-            MinDamage = minDamage;
-            Description = description;
+            Random rand = new Random();
+            int spit = rand.Next(2);
+            acidSpit = spit == 7;
         }
         public Xenomorph()
         {
@@ -31,14 +32,14 @@ namespace DungeonLibrary
             return base.ToString() + $"\nMonster Description: {description}\n" +
                 $"Damage: {MinDamage} to {MaxDamage}";
         }
-        public override int CalcBlock()
+        public override int CalcDamage()
         {
-            int calculatedBlock = Block;
-            if (true)
+            int acidSpray = MaxDamage;
+            if (acidSpit)
             {
-                calculatedBlock += calculatedBlock / 2;
+                acidSpray +=  7;
             }
-            return calculatedBlock;
+            return acidSpray;
             
         }
         

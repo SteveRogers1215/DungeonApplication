@@ -8,12 +8,13 @@ namespace DungeonLibrary
 {
     public class Wyvern : Monster
     {
-        public Wyvern(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
+        public bool ironScales { get; set; }
+        public Wyvern(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description, bool ironScales) :
             base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            MaxDamage = maxDamage;
-            MinDamage = minDamage;
-            Description = description;
+            Random rand = new Random();
+            int scaly = rand.Next(4);
+            ironScales = scaly == 5; 
         }
         public Wyvern()
         {
@@ -33,18 +34,13 @@ namespace DungeonLibrary
         }
         public override int CalcBlock()
         {
-            int calculatedBlock = Block;
-            if (true)
+            int ironScale = HitChance;
+            if (ironScales)
             {
-                calculatedBlock += calculatedBlock / 2;
+                ironScale +=  4;
             }
-            return calculatedBlock;
-            //Create a random object
-            //Random rando = new Random();
-            //Determine damage
-            //int grunDamage = rando.Next(MinDamage, MaxDamage + 1);
-            //Return the damage
-            //return grunDamage;
+            return ironScale;
+            
         }
     }
 }

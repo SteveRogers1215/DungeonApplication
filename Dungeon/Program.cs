@@ -29,12 +29,12 @@ public class Dungeon
         //Potential expansion -- let them make their own name
         //EXTRA FUNCTIONALITY!!!!!!!!!!
         Console.WriteLine("Please enter your name:");
-        player.name = Console.ReadLine()
+        string name = Console.ReadLine();
         //Show them possible races and let them pick one.
         Console.WriteLine("What race is your character? (1 = Orc, 2 = Human, 3 = Elf, 4 = Dwarf,5 = Goblin,6 = Ent,7 = Demon,8 = Angel,9 = Saiyan)");
-        player.race = Convert.ToInt32(Console.ReadLine());
+        int race = Convert.ToInt32(Console.ReadLine());
 
-        Player player = new({player.name}, 55, 50, 40, {player.race}, sword);
+        Player player = new(name, 55, 50, 40, (Race)(race-1), sword);
         #endregion
 
 

@@ -8,11 +8,12 @@ namespace DungeonLibrary
 {
     internal class Wyrm : Monster
     {
-        public Wyrm(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
+        public bool stronglyCoiled { get; set; }
+        public Wyrm(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description, bool stronglyCoiled) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            MaxDamage = maxDamage;
-            MinDamage = minDamage;
-            Description = description;
+            Random rand = new Random();
+            int coiled = rand.Next(4);
+            stronglyCoiled = coiled == 3;
         }
         public Wyrm()
         {
@@ -33,9 +34,9 @@ namespace DungeonLibrary
         public override int CalcBlock()
         {
             int calculatedBlock = Block;
-            if (true)
+            if (stronglyCoiled)
             {
-                calculatedBlock += calculatedBlock / 2;
+                calculatedBlock += 12;
             }
             return calculatedBlock;
             

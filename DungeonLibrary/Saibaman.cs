@@ -8,12 +8,13 @@ namespace DungeonLibrary
 {
     public class Saibaman : Monster
     {
-        public Saibaman(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) :
+        public bool screamDamage { get; set; }
+        public Saibaman(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description, bool screamDamage) :
             base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            MaxDamage = maxDamage;
-            MinDamage = minDamage;
-            Description = description;
+            Random rand = new Random();
+            int scream = rand.Next(3);
+            screamDamage = scream == 2;
         }
         public Saibaman()
         {
@@ -33,18 +34,13 @@ namespace DungeonLibrary
         }
         public override int CalcBlock()
         {
-            int calculatedBlock = Block;
-            if (true)
+            int monsterHealth = Life;
+            if (screamDamage)
             {
-                calculatedBlock += calculatedBlock / 2;
+                monsterHealth += 2;
             }
-            return calculatedBlock;
-            //Create a random object
-            //Random rando = new Random();
-            //Determine damage
-            //int grunDamage = rando.Next(MinDamage, MaxDamage + 1);
-            //Return the damage
-            //return grunDamage;
+            return monsterHealth;
+            
         }
     }
 }

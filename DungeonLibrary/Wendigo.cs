@@ -8,11 +8,12 @@ namespace DungeonLibrary
 {
     internal class Wendigo : Monster
     {
-        public Wendigo(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
+        public bool totalFrenzy { get; set; }
+        public Wendigo(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description, bool totalFrenzy) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            MaxDamage = maxDamage;
-            MinDamage = minDamage;
-            Description = description;
+            Random rand = new Random();
+            int frenzy = rand.Next(2);
+            totalFrenzy = frenzy == 5;
         }
         public Wendigo()
         {
@@ -30,14 +31,14 @@ namespace DungeonLibrary
             return base.ToString() + $"\nMonster Description: {description}\n" +
                 $"Damage: {MinDamage} to {MaxDamage}";
         }
-        public override int CalcBlock()
+        public override int CalcDamage()
         {
-            int calculatedBlock = Block;
-            if (true)
+            int frenziedDamage = MaxDamage;
+            if (totalFrenzy)
             {
-                calculatedBlock += calculatedBlock / 2;
+                frenziedDamage += 10;
             }
-            return calculatedBlock;
+            return frenziedDamage;
             
         }
     }

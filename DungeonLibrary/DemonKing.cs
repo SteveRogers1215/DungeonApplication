@@ -8,11 +8,15 @@ namespace DungeonLibrary
 {
     internal class DemonKing : Monster
     {
-        public DemonKing(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
+        public bool isEnraged { get; set; }
+
+        public DemonKing(string name, int maxLife, int hitChance, int block, int maxDamage, int minDamage, string description, bool isEnraged) : base(name, maxLife, hitChance, block, maxDamage, minDamage, description)
         {
-            MaxDamage = maxDamage;
-            MinDamage = minDamage;
-            Description = description;
+            //Notes for pointers on monsters
+            Random rand = new Random();
+            int bit = rand.Next(2);
+            isEnraged = bit == 1;
+
         }
         public DemonKing()
         {
@@ -33,9 +37,9 @@ namespace DungeonLibrary
         public override int CalcBlock()
         {
             int calculatedBlock = Block;
-            if (true)
+            if (isEnraged)
             {
-                calculatedBlock += calculatedBlock / 2;
+                calculatedBlock -= 6;
             }
             return calculatedBlock;
 
