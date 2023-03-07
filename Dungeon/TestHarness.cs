@@ -27,7 +27,7 @@ namespace Dungeon
             Console.WriteLine(w1);
             #endregion
 
-            //build and test a character - include CalcBlock(), CalchitChance(), CalcDamage()
+            //build and test a character - include CalcBlock(), CalcHitChance(), CalcDamage()
             #region Character Stuff
             Console.WriteLine("\n\n-----Characters-----\n\n");
             Player p1 = new Player()

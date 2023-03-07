@@ -22,12 +22,19 @@ public class Dungeon
         // Variable to keep score
         int score = 0;
         //Possible expanision - a list of premade weapons and allow user to choose(or random)
+        
         Weapon sword = new Weapon(15, 8, "Dragonslayer", 10, true,  WeaponType.Sword);
 
-
+        
         //Potential expansion -- let them make their own name
+        //EXTRA FUNCTIONALITY!!!!!!!!!!
+        Console.WriteLine("Please enter your name:");
+        player.name = Console.ReadLine()
         //Show them possible races and let them pick one.
-        Player player = new( "Hrothgar", 55, 50, 40, Race.Saiyan, sword);
+        Console.WriteLine("What race is your character? (1 = Orc, 2 = Human, 3 = Elf, 4 = Dwarf,5 = Goblin,6 = Ent,7 = Demon,8 = Angel,9 = Saiyan)");
+        player.race = Convert.ToInt32(Console.ReadLine());
+
+        Player player = new({player.name}, 55, 50, 40, {player.race}, sword);
         #endregion
 
 
