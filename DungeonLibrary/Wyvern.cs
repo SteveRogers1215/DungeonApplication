@@ -29,8 +29,7 @@ namespace DungeonLibrary
         public override string ToString()
         {
             string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n" +
-                $"Damage: {MinDamage} to {MaxDamage}";
+            return base.ToString() + (ironScales ? "It's deploying it scaly hide as projectiles!" : "The creatures scales seem to be rattleling");
         }
         public override int CalcBlock()
         {

@@ -28,8 +28,7 @@ namespace DungeonLibrary
         public override string ToString()
         {
             string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n" +
-                $"Damage: {MinDamage} to {MaxDamage}";
+            return base.ToString() +  (totalFrenzy ? "It's frenzied! Don't let it hit you!!" : "It seems to be slightly agitated");
         }
         public override int CalcDamage()
         {

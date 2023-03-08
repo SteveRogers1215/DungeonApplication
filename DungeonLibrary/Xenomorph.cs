@@ -29,8 +29,7 @@ namespace DungeonLibrary
         public override string ToString()
         {
             string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n" +
-                $"Damage: {MinDamage} to {MaxDamage}";
+            return base.ToString() + (acidSpit ? "Dont let the acid spray on you!!!" : "It might use its acid...BE CAREFUL!");
         }
         public override int CalcDamage()
         {
