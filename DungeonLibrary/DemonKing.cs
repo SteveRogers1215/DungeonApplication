@@ -27,12 +27,12 @@ namespace DungeonLibrary
             MaxDamage = 50;
             MinDamage = 25;
             Description = "Sometimes its better to just run...";
+            isEnraged = false;
         }
         public override string ToString()
         {
-            string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n" +
-                $"Damage: {MinDamage} to {MaxDamage}";
+
+            return base.ToString() + (isEnraged ? "RAGE BUILDING!?!?" : "Rage Disipated");
         }
         public override int CalcBlock()
         {

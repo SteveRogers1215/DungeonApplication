@@ -26,12 +26,12 @@ namespace DungeonLibrary
             MaxDamage = 25;
             MinDamage = 7;
             Description = "The Legendary Flame Dragon Knight Apostle!";
+            knightlyValor = false;
         }
         public override string ToString()
         {
-            string description = Description.ToString();
-            return base.ToString() + $"\nMonster Description: {description}\n" +
-                $"Damage: {MinDamage} to {MaxDamage}";
+
+            return base.ToString() + (knightlyValor ? "He's preparing to charge!!!" : "Looks like a defensive stance");
         }
         public override int CalcBlock()
         {
