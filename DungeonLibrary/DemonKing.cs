@@ -32,7 +32,7 @@ namespace DungeonLibrary
         public override string ToString()
         {
 
-            return base.ToString() + (isEnraged ? "RAGE BUILDING!?!?" : "Rage Disipated");
+            return base.ToString() + (isEnraged ? " RAGE BUILDING!?!? " : " Rage Disipated ");
         }
         public override int CalcBlock()
         {

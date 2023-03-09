@@ -20,11 +20,12 @@ namespace DungeonLibrary
         {
             Name = "Saibaman";
             MaxLife = 30;
-            HitChance = 8;
+            HitChance = 21;
             Block = 10;
             MaxDamage = 14;
             MinDamage = 2;
             Description = "Just add water...";
+            screamDamage = false;
         }
         public override string ToString()
         {

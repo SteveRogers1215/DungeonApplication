@@ -18,13 +18,14 @@ namespace DungeonLibrary
         }
         public Xenomorph()
         {
-            Name = "Chestburster";
+            Name = "Juvenile Xenomorph";
             MaxLife = 10;
-            HitChance = 10;
+            HitChance = 21;
             Block = 5;
             MaxDamage = 7;
             MinDamage = 3;
             Description = "You aren't in space, so we can definetly hear you scream";
+            acidSpit = false;
         }
         public override string ToString()
         {

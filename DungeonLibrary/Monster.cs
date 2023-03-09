@@ -60,13 +60,13 @@ namespace DungeonLibrary
         {
             //Change names and update consturctors after making new monsters this weekend.//NEW CLASSES FOR MONSTERS(HOMEWORK)
             //Create variety of monsters//3/2/2023 - MADE THREE NEW MONSTERS WILL ADD THEM SUNDAY MORNING. OUTSIDE OF THAT WILL ATTEMPT SOME LAST MINUTE SYTLING AND LEAVE IT AT THAT 
-            Xenomorph m1 = new("Chestburster", 10,  6, 6,  7,  3, "You aren't in space, so we can definetly hear you scream");
-            Wyvern m2 = new("Wyvern", 15, 8, 7, 12, 5, "Is it a worm...or a dragon?");
-            Saibaman m3 = new("Saibaman",  20,  8,  10,  10,  2,  "Just add water...");
-            Grunbeld m4 = new("Grunbeld",  50,  10,  10,  25,  5,  "The Legendary Flame Dragon Knight Apostle!");
-            Wendigo m5 = new("Wendigo", 50, 23, 17, 22, 15, "A consistent devourer of people.");
-            DemonKing m6 = new("Demon King", 75, 25, 17, 50, 25, "Sometimes its better to just run...");
-            Wyrm m7 = new("Great Wyrm", 100, 30, 20, 40, 15, "Its hide is impenitrable...it's claws like talons. A MIGHTY FOE.");
+            Xenomorph m1 = new("Chestburster", 10,  6, 6,  7,  3, "You aren't in space, so we can definetly hear you scream", false);
+            Wyvern m2 = new("Wyvern", 15, 8, 7, 12, 5, "Is it a worm...or a dragon?", false);
+            Saibaman m3 = new("Saibaman",  20,  8,  10,  10,  2,  "Just add water...", false);
+            Grunbeld m4 = new("Grunbeld",  50,  10,  10,  25,  5,  "The Legendary Flame Dragon Knight Apostle!", false);
+            Wendigo m5 = new("Wendigo", 50, 23, 17, 22, 15, "A consistent devourer of people.", false);
+            DemonKing m6 = new("Demon King", 75, 25, 17, 50, 25, "Sometimes its better to just run...", false);
+            Wyrm m7 = new("Great Wyrm", 100, 30, 20, 40, 15, "Its hide is impenitrable...it's claws like talons. A MIGHTY FOE.", false);
             
             List<Monster> monsters = new()
             {

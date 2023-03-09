@@ -21,7 +21,7 @@ namespace DungeonLibrary
         {
             Name = "Grunbeld";
             MaxLife = 55;
-            HitChance = 10;
+            HitChance = 30;
             Block = 10;
             MaxDamage = 25;
             MinDamage = 7;

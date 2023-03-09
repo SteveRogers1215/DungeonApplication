@@ -19,11 +19,12 @@ namespace DungeonLibrary
         {
             Name = "Wendigo";
             MaxLife = 50;
-            HitChance = 23;
+            HitChance = 25;
             Block = 17;
             MaxDamage = 22;
             MinDamage = 15;
             Description = "A consistent devourer of people.";
+            totalFrenzy = false;
         }
         public override string ToString()
         {

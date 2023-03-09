@@ -24,6 +24,7 @@ namespace DungeonLibrary
             MaxDamage = 40;
             MinDamage = 15;
             Description = "Its hide is impenitrable...it's claws like talons. A MIGHTY FOE.";
+            stronglyCoiled = false;
         }
         public override string ToString()
         {

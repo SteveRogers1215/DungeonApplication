@@ -20,11 +20,12 @@ namespace DungeonLibrary
         {
             Name = "Wyvern";
             MaxLife = 20;
-            HitChance = 8;
+            HitChance = 25;
             Block = 7;
             MaxDamage = 12;
             MinDamage = 5;
             Description = "Is it a worm...or a dragon?";
+            ironScales = false;
         }
         public override string ToString()
         {
